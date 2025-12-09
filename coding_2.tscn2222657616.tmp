@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ciej2m563pymk"]
+
+[ext_resource type="Script" uid="uid://gwptvc5dn6c2" path="res://coding_2.gd" id="1_knjnh"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_lgwwx"]
+
+[node name="Coding2" type="Node2D"]
+script = ExtResource("1_knjnh")
+metadata/_edit_horizontal_guides_ = [-4.0]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(370, 258)
+texture = ExtResource("2_lgwwx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(2.039215, 0.23321974, 0.24878867, 1)
+position = Vector2(645, 255)
+texture = ExtResource("2_lgwwx")
+region_rect = Rect2(53.407974, 34.48687, 25.144745, 50.289482)

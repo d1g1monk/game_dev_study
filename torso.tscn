@@ -1,0 +1,85 @@
+[gd_scene load_steps=2 format=3 uid="uid://usakt8wb2c75"]
+
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_50s6g"]
+
+[node name="Torso" type="Sprite2D"]
+position = Vector2(613.00006, 231)
+scale = Vector2(1.8359375, 5.2734375)
+texture = ExtResource("1_50s6g")
+
+[node name="Head" type="Sprite2D" parent="."]
+position = Vector2(0.27233887, -74.80889)
+scale = Vector2(0.66382974, 0.21037038)
+texture = ExtResource("1_50s6g")
+
+[node name="RightShoulder" type="Sprite2D" parent="."]
+position = Vector2(102.127625, -47.122963)
+rotation = -0.54263014
+scale = Vector2(0.16899079, 0.8205734)
+skew = -0.829806
+texture = ExtResource("1_50s6g")
+
+[node name="Icon8" type="Sprite2D" parent="RightShoulder"]
+position = Vector2(-32.437317, 98.59192)
+rotation = 0.08329265
+scale = Vector2(0.72351676, 0.81064576)
+skew = 0.6269716
+texture = ExtResource("1_50s6g")
+
+[node name="RightHand" type="Sprite2D" parent="RightShoulder"]
+position = Vector2(-83.041016, 151.02649)
+rotation = 0.17798333
+scale = Vector2(0.5629291, 0.4606812)
+skew = 0.8979429
+texture = ExtResource("1_50s6g")
+
+[node name="RightCalf" type="Sprite2D" parent="."]
+position = Vector2(39.763977, 81.06667)
+scale = Vector2(0.34471568, 0.32340756)
+texture = ExtResource("1_50s6g")
+
+[node name="Icon13" type="Sprite2D" parent="RightCalf"]
+position = Vector2(0.78356934, 118.442474)
+scale = Vector2(0.61107385, 1)
+texture = ExtResource("1_50s6g")
+
+[node name="Icon14" type="Sprite2D" parent="RightCalf"]
+position = Vector2(-1.5866699, 184.65585)
+scale = Vector2(0.80238765, 0.20224476)
+texture = ExtResource("1_50s6g")
+
+[node name="LeftCalf" type="Sprite2D" parent="."]
+position = Vector2(-35.134155, 81.256294)
+scale = Vector2(0.39152429, 0.32340756)
+texture = ExtResource("1_50s6g")
+
+[node name="Icon12" type="Sprite2D" parent="LeftCalf"]
+position = Vector2(-3.8214111, 118.442444)
+scale = Vector2(0.53801703, 1)
+texture = ExtResource("1_50s6g")
+
+[node name="Icon15" type="Sprite2D" parent="LeftCalf"]
+position = Vector2(-3.7334595, 181.18176)
+scale = Vector2(0.73227745, 0.20224476)
+texture = ExtResource("1_50s6g")
+
+[node name="LeftShoulder" type="Sprite2D" parent="."]
+position = Vector2(-85.28183, -43.31669)
+rotation = 0.33502412
+scale = Vector2(0.21670756, 0.695527)
+skew = 0.90074813
+texture = ExtResource("1_50s6g")
+
+[node name="Icon5" type="Sprite2D" parent="LeftShoulder"]
+position = Vector2(-33.26758, 99.86147)
+rotation = 0.08329266
+scale = Vector2(0.7235168, 0.81064594)
+skew = 0.6269716
+texture = ExtResource("1_50s6g")
+
+[node name="Icon6" type="Sprite2D" parent="LeftShoulder"]
+position = Vector2(-103.79474, 140.07877)
+rotation = 0.49487057
+scale = Vector2(0.36347958, 0.7134675)
+skew = 0.8979424
+texture = ExtResource("1_50s6g")
