@@ -60,7 +60,6 @@ func _process(delta: float) -> void:
         y1_direction = 1
     #2D2
     current_size = $Sprite2D2.texture.get_size().x * $Sprite2D2.scale.x
-    print(current_size)
     if is_growing:
         $Sprite2D2.scale.x = $Sprite2D2.scale.x * grow_rate
         $Sprite2D2.scale.y = $Sprite2D2.scale.y * grow_rate
