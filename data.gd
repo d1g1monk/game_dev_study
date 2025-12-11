@@ -10,7 +10,7 @@ var edge:
     get: return current_scale / 2
 
 var color_wheel: float = 0.0
-var color = Color.from_rgba8(fmod(color_wheel, 1.0), 1.0, 1.0)
+var color: Color = Color.from_rgba8(fmod(color_wheel, 1.0), 1.0, 1.0)
 
 func _ready() -> void:
     print(Vector2(2,5)*3)
@@ -25,7 +25,7 @@ func _ready() -> void:
     print("Dictionary2")
     for i in dictionary.values(): # Value based grep
         print(i)
-    $Icon.position.x = 600
+    $Icon.position.x = 500
     $Icon.position.y = 300
                 
 func _process(delta: float) -> void:
@@ -37,16 +37,16 @@ func _process(delta: float) -> void:
         if $Icon.position.x + edge >=1152:
             direction.x *= -1
             $Icon.modulate = color
-            color_wheel += 0.4    
+            color_wheel += 0.5    
         if $Icon.position.x - edge <= 0:
             direction.x *= -1
             $Icon.modulate = color
-            color_wheel += 0.4
+            color_wheel += 0.5
         if $Icon.position.y + edge >= 648:
             direction.y *= -1
             $Icon.modulate = color
-            color_wheel += 0.4
+            color_wheel += 0.5
         if $Icon.position.y - edge <= 0:
             direction.y *= -1
             $Icon.modulate = color
-            color_wheel += 0.4
+            color_wheel += 0.5
