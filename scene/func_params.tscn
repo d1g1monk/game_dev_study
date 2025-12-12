@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dtowftlba1a38"]
 
-[ext_resource type="Script" uid="uid://c6rs5bkgnlp6s" path="res://func_params.gd" id="1_jxi1h"]
+[ext_resource type="Script" uid="uid://c6rs5bkgnlp6s" path="res://code/func_params.gd" id="1_jxi1h"]
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_110p8"]
 
 [node name="Func_params" type="Node2D"]
