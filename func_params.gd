@@ -4,12 +4,13 @@ var global_var = "global_var"
 
 enum LogLevel { FATAL=1, ERROR=2, WARN=3, INFO=4, DEBUG=5}
 var CURRENT_LEVEL = LogLevel.INFO
-var grep: Dictionary = {1: "FATAL", 2: "ERROR", 3: "WARN", 4: "INFO", 5: "DEBUG"}
+var grep: Dictionary = { 1: "FATAL", 2: "ERROR", 3: "WARN", 4: "INFO", 5: "DEBUG"}
+var inventory: Dictionary = {"sword": 5, "gems": 4, "heart": 3}
 
 var result: float
 var func_array =  arrara  # Store function as variable
-var robot_path = [Vector2(1, 0), Vector2(1, 1), Vector2(1, 2), Vector2(2, 2), Vector2(3, 2), Vector2(4, 2), Vector2(5, 2)]
-
+var robot_path = [Vector2(11, 10), Vector2(1, 1), Vector2(1, 2), Vector2(2, 2), Vector2(3, 2), Vector2(4, 2), Vector2(5, 2)]
+var tracks = [1, 2, 3,4,5,6,7,8,9]
 var pos2: Vector2
 
 func _ready() -> void:
@@ -34,6 +35,8 @@ func _ready() -> void:
     game_log("This is fatal: ", LogLevel.FATAL) 
     if return_func() == 110:
         print(grep.values()[0])
+        print(grep)
+        print("GREP: ", grep[3])
     print(calc(5.4, 88.553, "plus"))
     print(calc(5.4, 88.553, "minus"))
     print(calc(5.4, 88.553, "divide"))
@@ -54,6 +57,24 @@ func _ready() -> void:
     for b in num_array:
         print(num_array)
     func_array.call(Vector2(3,1))
+    # Append at the end of an array
+    var back_order = "QWERTY"
+    print("PATH_SIZE: ", robot_path.size())
+    robot_path.append(back_order)
+    print("PATH_SIZE: ", robot_path.size())     # .size is a member function. works sort of like sizeof. in C
+    print(back_order) 
+    # Pop from at the beginning with pop_Front or selectively with pop_at or from the end pop_back
+    var front_order = robot_path.pop_front() 
+    print(front_order)
+    print("PATH_SIZE: ", robot_path.size())
+    # Align misaligned tracks on a spline by passing selected arrays into a var.  
+    var misaligned = [tracks.size() -1, tracks.size() -3, tracks.size() -4] 
+    print(misaligned)       # align(misaligned) in real practice
+    for item_names in inventory.keys():
+        var item_count = inventory[item_names]  # this key returns the value into rax and then is stored in item_count var. it is the value not the key
+        print(item_names + ": " + str(item_count))  # here we print the key, then the value
+        print(inventory)
+# ====================================================================================================================
 
 func arrara(v1: Vector2, v2: Vector2= Vector2(1,1)):
     print(v1, v2)
@@ -74,7 +95,7 @@ func game_log(msg: String, level: int):
     print("CURRENT_LEVEL = ", CURRENT_LEVEL, " ", "LEVEL = ", level)
     if level <= CURRENT_LEVEL and !level > 6:
         print(msg)
-      
+           
 func calc(num1: float, num2: float, operator: String) -> float:
     
     if operator == "plus":
