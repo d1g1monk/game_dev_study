@@ -5,13 +5,19 @@ extends CharacterBody2D
 
 var direction = Vector2.LEFT
 var speed = 15555
+var colors = [
+    preload("res://graphics/cars/red.png"),
+    preload("res://graphics/cars/green.png"),
+    preload("res://graphics/cars/yellow.png"),
+]
 
 func _ready() -> void:
+    $Sprite2D.texture = colors.pick_random()
     if position.x >= 1152:
         direction.x = -1
     if position.x <= 0:
         direction.x = 1
-    
+        
 func _process(delta: float) -> void:
     
     velocity = direction * speed * delta

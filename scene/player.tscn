@@ -102,7 +102,7 @@ collision_mask = 29
 script = ExtResource("1_hjaqi")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.1, 1.1)
+zoom = Vector2(2.035, 2.035)
 limit_left = 0
 limit_top = 0
 limit_right = 1152

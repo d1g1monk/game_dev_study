@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://mtj1tjmjavlb"]
+
+[ext_resource type="Script" uid="uid://cndhyudchiuon" path="res://code/global.gd" id="1_3o7an"]
+[ext_resource type="AudioStream" uid="uid://ujuwl1utwj68" path="res://audio/happy.mp3" id="2_3o7an"]
+
+[node name="global" type="Node"]
+script = ExtResource("1_3o7an")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_3o7an")
+volume_db = -20.195
+autoplay = true
+parameters/looping = true

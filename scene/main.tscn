@@ -160,7 +160,7 @@ position = Vector2(458, 579)
 position = Vector2(400, 571)
 
 [node name="Player" parent="Objects" instance=ExtResource("2_brvut")]
-position = Vector2(627, 237)
+position = Vector2(656, 523)
 metadata/_edit_group_ = true
 
 [node name="Crate" parent="Objects" instance=ExtResource("7_p1hux")]
@@ -171,7 +171,7 @@ position = Vector2(508, 353)
 rotation = -0.2617994
 
 [node name="Crate3" parent="Objects" instance=ExtResource("7_p1hux")]
-position = Vector2(593.99994, 404)
+position = Vector2(532.00006, 373)
 rotation = 0.5235988
 
 [node name="House1" parent="Objects" instance=ExtResource("8_of57s")]

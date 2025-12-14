@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dv4tp6lb08idr"]
+[gd_scene load_steps=6 format=3 uid="uid://dv4tp6lb08idr"]
 
 [ext_resource type="Texture2D" uid="uid://ded8huv3lr1a7" path="res://graphics/cars/yellow.png" id="1_l8qdw"]
 [ext_resource type="Script" uid="uid://dsutgevxxa7wt" path="res://code/car.gd" id="1_tphm3"]
+[ext_resource type="AudioStream" uid="uid://gsqrmuw4v38m" path="res://audio/car.mp3" id="3_a1hbt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tphm3"]
 size = Vector2(20, 10)
@@ -32,6 +33,14 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_a1hbt")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_a1hbt")
+volume_db = -11.41
+autoplay = true
+max_distance = 47.0
+area_mask = 2
+parameters/looping = true
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

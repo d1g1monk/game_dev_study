@@ -1,11 +1,15 @@
 extends Control
 
+
 func _ready():
     mouse_filter = Control.MOUSE_FILTER_STOP  # or MOUSE_FILTER_STOP
+    $Label2.text = "High Score: " + str(Global.score)
+    
 
 func _on_label_3_button_up() -> void:
     print("Restarting")
     get_tree().change_scene_to_file("res://scene/main.tscn")       
+
 
 func _unhandled_input(event: InputEvent) -> void:
     if event.is_action_released("space"):
