@@ -90,6 +90,6 @@ theme_override_colors/font_pressed_color = Color(0.9843137, 0.22352941, 0.192156
 theme_override_colors/font_hover_color = Color(0.24705882, 0.92941177, 0.23529412, 1)
 theme_override_fonts/font = ExtResource("3_7itxo")
 theme_override_font_sizes/font_size = 13
-text = "Hit a key to restart"
+text = "Hit to restart"
 
 [connection signal="button_up" from="RestartButton" to="." method="_on_label_3_button_up"]
