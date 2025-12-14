@@ -97,10 +97,12 @@ animations = [{
 size = Vector2(12.75, 13.75)
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 29
 script = ExtResource("1_hjaqi")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(4, 4)
+zoom = Vector2(1.1, 1.1)
 limit_left = 0
 limit_top = 0
 limit_right = 1152
@@ -110,10 +112,10 @@ rotation_smoothing_speed = 25.0
 [node name="Player_sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(1.2031251, 1.0625)
 sprite_frames = SubResource("SpriteFrames_xo3ru")
-animation = &"left"
+animation = &"down"
 autoplay = "left"
-frame_progress = 0.3200641
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.685)
 shape = SubResource("RectangleShape2D_hjaqi")

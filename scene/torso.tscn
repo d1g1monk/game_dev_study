@@ -3,35 +3,31 @@
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_50s6g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hk7d6"]
-size = Vector2(105.46756, 19.877808)
+size = Vector2(27.380991, 7.4083576)
 
 [node name="robo" type="CharacterBody2D"]
 scale = Vector2(0.4930426, 1.2148438)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.0282192, 124.35691)
-shape = SubResource("RectangleShape2D_hk7d6")
-
 [node name="Torso" type="Sprite2D" parent="."]
 self_modulate = Color(1, 0.17254902, 0.09019608, 1)
-position = Vector2(2.0282288, 2.4694595)
+position = Vector2(0, -139.11253)
 texture = ExtResource("1_50s6g")
 
 [node name="Head" type="Sprite2D" parent="Torso"]
 modulate = Color(0.99215686, 0.4117647, 0.49803922, 1)
-position = Vector2(-1.7558897, -77.27835)
+position = Vector2(-1.7558895, -77.27835)
 scale = Vector2(0.66382974, 0.21037038)
 texture = ExtResource("1_50s6g")
 
-[node name="RightShoulder" type="Sprite2D" parent="Torso"]
+[node name="RightShoulder" type="Sprite2D" parent="Torso/Head"]
 modulate = Color(0.99215686, 0.4117647, 0.49803922, 1)
-position = Vector2(100.099396, -49.592422)
-rotation = -0.54263014
-scale = Vector2(0.16899079, 0.82057333)
-skew = -0.8298061
+position = Vector2(153.43587, 131.60564)
+rotation = -1.0869287
+scale = Vector2(0.46861252, 1.4350947)
+skew = 0.08137107
 texture = ExtResource("1_50s6g")
 
-[node name="Icon8" type="Sprite2D" parent="Torso/RightShoulder"]
+[node name="Icon8" type="Sprite2D" parent="Torso/Head/RightShoulder"]
 modulate = Color(0.99215686, 0.4117647, 0.49803922, 1)
 position = Vector2(-32.437317, 98.59192)
 rotation = 0.08329265
@@ -39,7 +35,7 @@ scale = Vector2(0.72351676, 0.81064576)
 skew = 0.6269716
 texture = ExtResource("1_50s6g")
 
-[node name="RightHand" type="Sprite2D" parent="Torso/RightShoulder"]
+[node name="RightHand" type="Sprite2D" parent="Torso/Head/RightShoulder"]
 modulate = Color(0.99215686, 0.4117647, 0.49803922, 1)
 position = Vector2(-83.041016, 151.02649)
 rotation = 0.17798333
@@ -47,60 +43,68 @@ scale = Vector2(0.5629291, 0.4606812)
 skew = 0.8979429
 texture = ExtResource("1_50s6g")
 
-[node name="RightCalf" type="Sprite2D" parent="Torso"]
+[node name="RightCalf" type="Sprite2D" parent="Torso/Head"]
 modulate = Color(0.99215686, 0.4117647, 0.49803922, 1)
-position = Vector2(37.735744, 78.59721)
-scale = Vector2(0.34471568, 0.32340756)
+position = Vector2(59.490612, 740.9579)
+scale = Vector2(0.5192833, 1.5373248)
 texture = ExtResource("1_50s6g")
 
-[node name="Icon13" type="Sprite2D" parent="Torso/RightCalf"]
+[node name="Icon13" type="Sprite2D" parent="Torso/Head/RightCalf"]
 modulate = Color(0.99215686, 0.4117647, 0.49803922, 1)
 position = Vector2(0.78356934, 118.442474)
 scale = Vector2(0.61107385, 1)
 texture = ExtResource("1_50s6g")
 
-[node name="Icon14" type="Sprite2D" parent="Torso/RightCalf"]
+[node name="Icon14" type="Sprite2D" parent="Torso/Head/RightCalf"]
 modulate = Color(0.99215686, 0.4117647, 0.49803922, 1)
 position = Vector2(-1.5866699, 184.65585)
 scale = Vector2(0.80238765, 0.20224476)
 texture = ExtResource("1_50s6g")
 
-[node name="LeftCalf" type="Sprite2D" parent="Torso"]
+[node name="LeftCalf" type="Sprite2D" parent="Torso/Head"]
 modulate = Color(0.99215686, 0.4117647, 0.49803922, 1)
-position = Vector2(-37.162384, 78.786835)
-scale = Vector2(0.39152429, 0.32340756)
+position = Vector2(-53.336708, 741.8592)
+scale = Vector2(0.58979625, 1.5373248)
 texture = ExtResource("1_50s6g")
 
-[node name="Icon12" type="Sprite2D" parent="Torso/LeftCalf"]
+[node name="Icon12" type="Sprite2D" parent="Torso/Head/LeftCalf"]
 modulate = Color(0.99215686, 0.4117647, 0.49803922, 1)
 position = Vector2(-3.8214111, 118.442444)
 scale = Vector2(0.53801703, 1)
 texture = ExtResource("1_50s6g")
 
-[node name="Icon15" type="Sprite2D" parent="Torso/LeftCalf"]
+[node name="Icon15" type="Sprite2D" parent="Torso/Head/LeftCalf"]
 modulate = Color(0.99215686, 0.4117647, 0.49803922, 1)
 position = Vector2(-3.7334595, 181.18176)
 scale = Vector2(0.73227745, 0.20224476)
 texture = ExtResource("1_50s6g")
 
-[node name="LeftShoulder" type="Sprite2D" parent="Torso"]
+[node name="LeftShoulder" type="Sprite2D" parent="Torso/Head"]
 modulate = Color(0.99215686, 0.4117647, 0.49803922, 1)
-position = Vector2(-87.31006, -45.786148)
-rotation = 0.33502412
-scale = Vector2(0.21670756, 0.69552696)
-skew = 0.90074813
+position = Vector2(-128.87968, 149.69884)
+rotation = 0.83234346
+scale = Vector2(0.45800066, 1.4699615)
+skew = -0.09389067
 texture = ExtResource("1_50s6g")
 
-[node name="Icon5" type="Sprite2D" parent="Torso/LeftShoulder"]
+[node name="Icon5" type="Sprite2D" parent="Torso/Head/LeftShoulder"]
 position = Vector2(-33.26758, 99.86147)
 rotation = 0.08329266
 scale = Vector2(0.7235168, 0.81064594)
 skew = 0.6269716
 texture = ExtResource("1_50s6g")
 
-[node name="Icon6" type="Sprite2D" parent="Torso/LeftShoulder"]
+[node name="Icon6" type="Sprite2D" parent="Torso/Head/LeftShoulder"]
 position = Vector2(-103.79474, 140.07877)
 rotation = 0.49487057
 scale = Vector2(0.36347958, 0.7134675)
 skew = 0.8979424
 texture = ExtResource("1_50s6g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-39.550343, -6.996784)
+shape = SubResource("RectangleShape2D_hk7d6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(36.508003, -5.7620583)
+shape = SubResource("RectangleShape2D_hk7d6")
